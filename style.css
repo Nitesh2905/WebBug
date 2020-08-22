@@ -155,12 +155,17 @@ header {
 .btn:hover {
   background-color: #6930c3;
 }
-
+.feature{
+  position: relative;
+  font-size: 3.5rem;
+  top: 18rem;
+  text-align: center;
+}
 .head-text {
   font-family: "Signika", sans-serif;
   position: relative;
   font-size: 3.5rem;
-  top: 21rem;
+  top: 5rem;
   text-align: center;
 }
 .card-section {
@@ -206,11 +211,10 @@ header {
 
 footer {
   width: 100%;
-  height: 45vh;
+  height: 65vh;
   position: relative;
-  top: 10rem;
+  top: 25rem;
 }
-
 .contactus {
   display: flex;
   align-content: center;
@@ -237,7 +241,7 @@ footer::before {
   position: relative;
   top: 21rem;
   left: -8rem;
-  max-width: 40%;
+  max-width: 45%;
   font-size: 2.1rem;
 }
 .address a {
@@ -249,7 +253,8 @@ footer::before {
 .address a ion-icon {
   color: rgb(28, 202, 216, 0.9);
   transition: all 600ms ease-in-out;
-  margin: 0rem 1rem;
+  font-size: 1.5rem;
+  margin: 0rem 2rem;
 }
 .social-media {
   position: relative;
@@ -291,11 +296,16 @@ footer::before {
   }
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 400px) {
+  .hero{
+    position: relative;
+    top: 3rem;
+  }
   .card-section {
     width: 100%;
     height: 100vh;
   }
+  
   .address {
     position: relative;
     max-width: 50%;
@@ -326,7 +336,7 @@ footer::before {
     opacity: 0;
   }
 
-  .logo{
+  .logo {
     position: relative;
     top: 1.8rem;
     left: 8rem;
@@ -360,7 +370,7 @@ footer::before {
     transition: all 0.5s ease-in-out;
     position: absolute;
     top: 0rem;
-    left: 40rem;
+    left: 0rem;
     z-index: 15;
   }
   .menu-btn_burger::before,
@@ -391,5 +401,36 @@ footer::before {
   }
   .menu-btn.open .menu-btn_burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  .head-text {
+    position: relative;
+
+    top: 8rem;
+  }
+
+  .feature{
+    position: relative;
+
+    top: 20rem;
+  }
+
+  .card-section {
+    height: 70vh;
+    position: relative;
+    top: 10rem;
+  }
+  .cards{
+    margin: 0.8rem 0;
+  }
+  footer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 45rem;
+  }
+  .contactus{
+    position: relative;
+    
   }
 }
