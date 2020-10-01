@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1.0 shrink-to-fit"
     />
     <title>Webbug</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Signika&display=swap"
       rel="stylesheet"
@@ -17,8 +18,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
     <header>
-      <div class="container">
+      <div class="">
         <div class="menu-btn">
           <div class="menu-btn_burger"></div>
         </div>
@@ -540,6 +544,30 @@
           menuOpen = false;
         }
       });
+
+      
+        // for sticky nav and color change of nav on scroll (document.documentElement.scrollTop this is working)
+
+        const navbarScroll = document.querySelector('nav');
+       window.addEventListener('scroll', function(){
+if(document.body.scrollTop > 60 || document.documentElement.scrollTop > 60){
+navbarScroll.classList.add('navbg');
+}
+else{
+  navbarScroll.classList.remove('navbg');
+}
+});
+
+// for loader
+    setTimeout(() => {
+      $('.loader_bg').fadeToggle();
+    }, 1500);
+
+  
+   
+
+
+
     </script>
   </body>
 </html>
